@@ -1,0 +1,49 @@
+# 2018 TIR images processing procedures and parameters
+# Authors: Haoyu Niu, Tiebiao Zhao, YangQuan Chen 
+# Institution: MESA Lab, University of California, Merced
+# Agisoft Photoscan settings and workflow
+
+Step 1 : Align Photos
+
+	# General
+		Accuracy: High
+		Pair preselection: Disabled
+		Generic preselection: Yes
+
+	# Advanced
+		Key point limit: 40,000
+		Tie point limit: 4,000
+		Adaptive camera model fitting: Yes
+
+Step 2 : Build Mesh
+	# General
+		Surface type: Height field
+		Source data: Sparse cloud
+		Face count: Medium(30,000)
+
+	# Advanced
+		Interpolation: Enabled(default)
+		Point classes: All
+ 
+Step 3 : Build Orthomosaick
+	# Projection
+		Type: Geographic
+			WGS 84(EPSG::4326)
+
+	# Parameters
+		Surface: Mesh
+		Blending mode: Mosaic(default)
+		Enable color correction: No
+		Pixel size(m):
+
+	# Region 
+		Nothing
+
+
+
+
+
+
+
+
+
